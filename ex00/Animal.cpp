@@ -6,7 +6,7 @@
 /*   By: ayel-mou <ayel-mou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/12 14:55:16 by ayel-mou          #+#    #+#             */
-/*   Updated: 2025/04/18 14:59:17 by ayel-mou         ###   ########.fr       */
+/*   Updated: 2025/04/18 15:49:03 by ayel-mou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Animal::Animal()
 {
-    type = "default animal";
+    type = "undefind";
     std::cout << "Default constructor called for animal" << std::endl;
 }
 
