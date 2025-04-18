@@ -6,7 +6,7 @@
 /*   By: ayel-mou <ayel-mou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 13:14:31 by ayel-mou          #+#    #+#             */
-/*   Updated: 2025/04/18 13:29:19 by ayel-mou         ###   ########.fr       */
+/*   Updated: 2025/04/18 14:52:29 by ayel-mou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Dog : public Animal
     Dog(const Dog& copy);
     Dog&  operator=(const Dog& other);
     ~Dog();
-    void makeSound();  
+    void makeSound() const;  
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: ayel-mou <ayel-mou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/12 14:55:16 by ayel-mou          #+#    #+#             */
-/*   Updated: 2025/04/18 13:35:58 by ayel-mou         ###   ########.fr       */
+/*   Updated: 2025/04/18 14:59:17 by ayel-mou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,12 @@ Animal::Animal()
 Animal::Animal(const Animal& other)
     : type(other.type)
 {
-    
+    std::cout << "Copy constructor called for Animal" << std::endl;
 }
 
 Animal& Animal::operator=(const Animal& other)
 {
+    std::cout << "Copy assignment operator called for Animal" << std::endl;
     if (this != &other)
     {
         type = other.type;
@@ -34,7 +35,7 @@ Animal& Animal::operator=(const Animal& other)
     return (*this);
 }   
 
-void Animal::makeSound()
+void Animal::makeSound() const
 {
     std::cout << "The animal makes a sound" << std::endl; 
 }
@@ -46,5 +47,5 @@ const std::string Animal::getType() const
 
 Animal::~Animal()
 {
-    
+    std::cout << "Destructor called for Animal" << std::endl;
 }
