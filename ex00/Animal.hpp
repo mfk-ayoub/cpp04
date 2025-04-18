@@ -6,14 +6,14 @@
 /*   By: ayel-mou <ayel-mou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 19:46:37 by ayel-mou          #+#    #+#             */
-/*   Updated: 2025/04/12 15:04:52 by ayel-mou         ###   ########.fr       */
+/*   Updated: 2025/04/18 13:34:20 by ayel-mou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef _ANIMAL_HPP_
 #define  _ANIMAL_HPP_
 #include <string>
-
+#include <iostream>
 
 class  Animal
 {
@@ -21,11 +21,10 @@ class  Animal
 		std::string type;
 	public :
 		Animal();
-		Animal(std::string type);
 		Animal(const Animal& other);
-		Animal& Animal(const Animal& other);
-		~Animal();
-		const std::string& getType() const;
+		Animal& operator=(const Animal& other);
+		virtual ~Animal();
+		const std::string getType() const;
 		void makeSound();	
 };
 
