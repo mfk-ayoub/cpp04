@@ -6,7 +6,7 @@
 /*   By: ayel-mou <ayel-mou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 13:14:33 by ayel-mou          #+#    #+#             */
-/*   Updated: 2025/04/18 14:58:47 by ayel-mou         ###   ########.fr       */
+/*   Updated: 2025/04/21 08:49:04 by ayel-mou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ Dog&  Dog::operator=(const Dog& other)
 
 void Dog::makeSound() const
 {
-    std::cout << "the Dog make a sound" << std::endl;
+    std::cout << "owwwww owwwww!" << std::endl;
 }
 
 Dog::~Dog()
