@@ -6,7 +6,7 @@
 /*   By: ayel-mou <ayel-mou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 17:47:22 by ayel-mou          #+#    #+#             */
-/*   Updated: 2025/04/23 22:58:21 by ayel-mou         ###   ########.fr       */
+/*   Updated: 2025/05/01 05:09:33 by ayel-mou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Cat : public Animal
         Cat(const Cat& copy);
         Cat&  operator=(const Cat& other);
         void    setBrain(Brain const &brain);
-        Brain   &getBrain(void) const;
+        Brain   &GetBrain(void) const;
         ~Cat();
         void makeSound() const;  
 };

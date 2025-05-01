@@ -6,7 +6,7 @@
 /*   By: ayel-mou <ayel-mou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 17:49:04 by ayel-mou          #+#    #+#             */
-/*   Updated: 2025/04/23 22:58:38 by ayel-mou         ###   ########.fr       */
+/*   Updated: 2025/05/01 05:09:46 by ayel-mou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ Cat::Cat(const Cat& copy)
 {
     std::cout << "Copy constructor called for Cat" << std::endl;
     type = copy.type;
+    brain = new Brain(*copy.brain); 
 }
 
 Cat&  Cat::operator=(const Cat& other)
@@ -46,7 +47,7 @@ void Cat::makeSound() const
 }
 
 
-Brain &Cat::getBrain(void) const
+Brain &Cat::GetBrain(void) const
 {
 	return (*brain);
 }

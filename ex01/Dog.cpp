@@ -6,7 +6,7 @@
 /*   By: ayel-mou <ayel-mou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 13:14:33 by ayel-mou          #+#    #+#             */
-/*   Updated: 2025/04/23 17:19:42 by ayel-mou         ###   ########.fr       */
+/*   Updated: 2025/05/01 05:10:13 by ayel-mou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ Dog::Dog(const Dog& copy)
 {
     std::cout << "Copy constructor called for Dog" << std::endl;
     type = copy.type;
+    brain = new Brain(*copy.brain); 
 }
 
 Dog&  Dog::operator=(const Dog& other)
@@ -38,6 +39,11 @@ Dog&  Dog::operator=(const Dog& other)
         brain = new Brain(*other.brain);
     }
     return (*this);
+}
+
+Brain &Dog::GetBrain(void) const
+{
+	return (*brain);
 }
 
 void Dog::makeSound() const

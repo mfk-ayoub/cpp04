@@ -6,12 +6,13 @@
 /*   By: ayel-mou <ayel-mou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 19:46:37 by ayel-mou          #+#    #+#             */
-/*   Updated: 2025/04/21 09:52:18 by ayel-mou         ###   ########.fr       */
+/*   Updated: 2025/05/01 04:55:53 by ayel-mou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef _ANIMAL_HPP_
 #define  _ANIMAL_HPP_
+#include "Brain.hpp"
 #include <string>
 #include <iostream>
 
@@ -26,6 +27,7 @@ class  Animal
 		virtual ~Animal();
 		const std::string getType() const;
 		virtual void makeSound() const;	
+		virtual Brain   &GetBrain(void) const = 0;
 };
 
 

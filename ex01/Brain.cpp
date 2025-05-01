@@ -6,7 +6,7 @@
 /*   By: ayel-mou <ayel-mou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 09:15:53 by ayel-mou          #+#    #+#             */
-/*   Updated: 2025/04/23 22:59:56 by ayel-mou         ###   ########.fr       */
+/*   Updated: 2025/05/01 04:42:40 by ayel-mou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,10 +44,26 @@ Brain& Brain::operator=(const Brain& other)
     return (*this);
 }
 
-std::string& Brain::GetIdea(int index) const
+const std::string& Brain::GetIdea(int index) const
 {
-    
+    static const std::string error = "Error: idea Not found!";
+    if (index >= 0 && index < 100)
+        return (ideas[index]);
+    else
+        return (error);
 }
+
+
+void Brain::SetIdea(int index, const std::string& idea)
+{
+    if (index < 0 || index >= 100)
+    {
+        std::cerr << "Error: index must be in range 0--99!" << std::endl;
+        return ;
+    }
+    ideas[index] = idea;
+}
+
 
 Brain::~Brain()
 {

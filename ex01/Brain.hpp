@@ -6,7 +6,7 @@
 /*   By: ayel-mou <ayel-mou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/20 18:03:39 by ayel-mou          #+#    #+#             */
-/*   Updated: 2025/04/23 22:56:51 by ayel-mou         ###   ########.fr       */
+/*   Updated: 2025/05/01 04:42:31 by ayel-mou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ class  Brain
         Brain();
         Brain(const Brain& copy);
         Brain& operator=(const Brain& other);
-        std::string& GetIdea(int index) const;
+        const std::string& GetIdea(int index) const;
+        void SetIdea(int index, const std::string& idea);
         ~Brain();
 };
 
