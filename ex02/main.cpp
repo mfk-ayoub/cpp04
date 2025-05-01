@@ -6,7 +6,7 @@
 /*   By: ayel-mou <ayel-mou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 17:53:22 by ayel-mou          #+#    #+#             */
-/*   Updated: 2025/05/01 07:35:24 by ayel-mou         ###   ########.fr       */
+/*   Updated: 2025/05/01 07:41:05 by ayel-mou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int main()
     
     const int size = 10;
     Animal* animals[size];
+    
     
 	int				index;
     

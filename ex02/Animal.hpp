@@ -1,35 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayel-mou <ayel-mou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/18 13:14:31 by ayel-mou          #+#    #+#             */
-/*   Updated: 2025/05/01 06:51:05 by ayel-mou         ###   ########.fr       */
+/*   Created: 2025/04/08 19:46:37 by ayel-mou          #+#    #+#             */
+/*   Updated: 2025/05/01 07:36:06 by ayel-mou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-#define DOG_HPP
-
-#include "Animal.hpp"
+#ifndef _ANIMAL_HPP_
+#define  _ANIMAL_HPP_
 #include "Brain.hpp"
+#include <string>
+#include <iostream>
 
-class Dog : public Animal
+class  Animal
 {
-    private:
-        Brain* brain;
-    public:
-        Dog();
-        Dog(const Dog& copy);
-        Dog&  operator=(const Dog& other);
-        Brain &GetBrain(void) const;
-        const std::string& GetIdea(int index) const;
-        void SetIdea(int index, const std::string& idea);
-
-        ~Dog();
-        void makeSound() const;  
+	protected:
+		std::string type;
+	public :
+		Animal();
+		Animal(const Animal& other);
+		Animal& operator=(const Animal& other);
+		virtual ~Animal();
+		const std::string getType() const;
+		virtual void makeSound() const = 0;	
 };
+
 
 #endif

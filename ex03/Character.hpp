@@ -1,35 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Character.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayel-mou <ayel-mou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/18 13:14:31 by ayel-mou          #+#    #+#             */
-/*   Updated: 2025/05/01 06:51:05 by ayel-mou         ###   ########.fr       */
+/*   Created: 2025/05/01 08:31:20 by ayel-mou          #+#    #+#             */
+/*   Updated: 2025/05/01 09:13:06 by ayel-mou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-#define DOG_HPP
+#pragma once
 
-#include "Animal.hpp"
-#include "Brain.hpp"
+#include <string>
+#include "AMateria.hpp"
+#include "ICharacter.hpp"
 
-class Dog : public Animal
+class Character : public ICharacter
 {
     private:
-        Brain* brain;
+        std::string name;
+        AMateria	*inventory[4];
     public:
-        Dog();
-        Dog(const Dog& copy);
-        Dog&  operator=(const Dog& other);
-        Brain &GetBrain(void) const;
-        const std::string& GetIdea(int index) const;
-        void SetIdea(int index, const std::string& idea);
-
-        ~Dog();
-        void makeSound() const;  
+        Character();
+        Character(std::string& name);
+        void SetName(std::string& name);
+        const  std::string& GetName() const;
+        ~Character();
 };
 
-#endif
