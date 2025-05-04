@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AMateria.cpp                                       :+:      :+:    :+:   */
+/*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayel-mou <ayel-mou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/01 07:44:45 by ayel-mou          #+#    #+#             */
-/*   Updated: 2025/05/02 06:24:14 by ayel-mou         ###   ########.fr       */
+/*   Created: 2025/05/04 06:32:35 by ayel-mou          #+#    #+#             */
+/*   Updated: 2025/05/04 06:33:08 by ayel-mou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AMateria.hpp"
+#include "IMateriaSource.hpp"
 
-AMateria::AMateria(std::string const& type)
+class MateriaSource : public IMateriaSource
 {
-    this->type =  type;
-}
-std::string const& AMateria::getType() const
-{
-    return type;
-}
+    private:
+        AMateria* _templates[4];
+    public:
+        MateriaSource();
+        MateriaSource(const MateriaSource& other);
+        MateriaSource& operator=(const MateriaSource& other);
+        virtual ~MateriaSource();
 
-void AMateria::use(ICharacter& target)
-{
-     
-}
+        void learnMateria(AMateria*);
+        AMateria* createMateria(std::string const & type);
+};
 
-AMateria::~AMateria();
-{
-    
-}
+

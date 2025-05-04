@@ -6,7 +6,7 @@
 /*   By: ayel-mou <ayel-mou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 07:44:32 by ayel-mou          #+#    #+#             */
-/*   Updated: 2025/05/01 07:59:44 by ayel-mou         ###   ########.fr       */
+/*   Updated: 2025/05/02 06:23:37 by ayel-mou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,5 @@ class AMateria
         std::string const & getType() const;
         virtual AMateria* clone() const = 0;
         virtual void use(ICharacter& target);
+        virtual ~AMateria();
 };
