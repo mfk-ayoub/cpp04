@@ -6,7 +6,7 @@
 /*   By: ayel-mou <ayel-mou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 07:49:21 by ayel-mou          #+#    #+#             */
-/*   Updated: 2025/05/01 09:15:09 by ayel-mou         ###   ########.fr       */
+/*   Updated: 2025/05/09 09:05:24 by ayel-mou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,19 @@
 
 #include "AMateria.hpp"
 #include <iostream>
+
+
+
 class Cure : public AMateria
 {
-    private:
-      
-    public:
-        void				use(ICharacter &target);
-        Cure();
-        ~Cure();
+public:
+    Cure();
+    Cure(const Cure& other);
+    Cure& operator=(const Cure& other);
+    virtual ~Cure();
+
+    virtual AMateria* clone() const;
+    virtual void use(ICharacter& target);
 };
 
-Cure::Cure(/* args */)
-{
-}
 
-void    Cure::use(ICharacter &target)
-{
-    std::cout << "* heals " << target.getName() << "’s" <<  " wounds *" << std::endl;
-}
-
-Cure::~Cure()
-{
-}
