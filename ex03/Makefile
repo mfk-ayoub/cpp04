@@ -6,7 +6,7 @@
 #    By: ayel-mou <ayel-mou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/23 07:04:36 by ayel-mou          #+#    #+#              #
-#    Updated: 2025/05/01 09:11:31 by ayel-mou         ###   ########.fr        #
+#    Updated: 2025/05/12 10:57:36 by ayel-mou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,3 +45,5 @@ $(BINDIR):
 .DEFAULT_GOAL:= $(NAME)
 .SECONDARY: $(OBJ)
 .PHONY: debug all clean fclean re
+
+
